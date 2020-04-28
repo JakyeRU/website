@@ -1,0 +1,70 @@
+{{define "navbar"}}
+  <ul class="navbar navbar-transparent nav-pills-icons">
+    <div class="container">
+      <ul class="nav nav-pills pink-grad" role="tablist">
+
+        <li class="nav-item">
+          <a class="nav-link active" href="/" role="tab">
+            <i class="fa fa-home"></i>
+            Home
+          </a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link active dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+            <i class="fa fa-book"></i>
+            Information
+          </a>
+          <div class="dropdown-menu nav-menu">
+            <a class="dropdown-item" href="/commands"><i class="fa fa-terminal"></i>Commands</a>
+            <a class="dropdown-item" href="/settings"><i class="fa fa-cogs"></i>Settings</a>
+            <a class="dropdown-item" href="/tags"><i class="fa fa-comment"></i>Tags</a>
+            <a class="dropdown-item" href="/panels"><i class="fas fa-mouse-pointer"></i>Panels</a>
+          </div>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link active" href="https://panel.ticketsbot.net" role="tab">
+            <i class="fa fa-cloud"></i>
+            Dashboard
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link active" href="/premium" role="tab">
+            <i class="fas fa-donate"></i>
+            Premium
+          </a>
+        </li>
+
+        <li class="nav-item dropdown">
+          <a class="nav-link active dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">
+            <i class="fa fa-external-link-alt"></i>
+            External Links
+          </a>
+          <div class="dropdown-menu">
+            <a class="dropdown-item" href="https://github.com/TicketsBot"><i class="fab fa-github"></i>GitHub</a>
+            <a class="dropdown-item" href="https://twitter.com/TicketsDiscord"><i class="fab fa-twitter"></i>Twitter</a>
+          </div>
+        </li>
+
+      </ul>
+
+      <ul class="nav nav-pills pink-grad justify-content-end" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" href="https://discord.gg/VtV3rSk" role="tab">
+            <i class="fa fa-life-ring"></i>
+            Support
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a class="nav-link active" href="https://invite.ticketsbot.net" role="tab">
+            <i class="fa fa-plus"></i>
+            Invite
+          </a>
+        </li>
+      </ul>
+    </div>
+  </ul>
+{{end}}

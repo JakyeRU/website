@@ -1,0 +1,64 @@
+.page-header {
+  overflow-x: hidden !important;
+  overflow-y: scroll !important;
+}
+
+.subtitle {
+  font-size: 28px;
+}
+
+.servercount {
+  font-size: 24px;
+}
+
+.caption {
+  font-size: 18px;
+}
+
+#timeline::-webkit-scrollbar {
+    display: none !important;
+}
+
+@media (max-width: 574px) {
+  .info-section {
+    position: absolute;
+  }
+}
+
+@media (min-width: 575px) {
+  .info-section {
+    position: relative;
+  }
+}
+
+@media screen and (max-width: 991px) {
+  #widgets {
+    visibility: hidden;
+    clear: both;
+    float: left;
+    margin: 10px auto 5px 20px;
+    width: 28%;
+    display: none;
+  }
+}
+
+.feature-header {
+  text-align: center;
+  padding-top: 5px;
+  color: white;
+}
+
+.feature-wrapper {
+  padding-left: 10px !important;
+  padding-right: 10px !important;
+}
+
+.feature-image {
+  border-radius: 5px !important;
+  border-color: transparent !important;
+}
+
+.feature-description {
+  padding-top: 10px;
+  text-align: center;
+}

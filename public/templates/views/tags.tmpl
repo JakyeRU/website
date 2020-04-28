@@ -1,0 +1,46 @@
+{{define "content"}}
+  <div class="wrapper">
+    <div class="page-header header-filter">
+      <div class="squares square1"></div>
+      <div class="squares square2"></div>
+      <div class="squares square3"></div>
+      <div class="squares square5"></div>
+      <div class="squares square7"></div>
+      <div class="container">
+        {{template "navbar" .}}
+        <div class="row justify-content-center">
+          <div class="col-lg-12">
+            <h2 class="mb-5" id="commands">
+              <span>Tags</span>
+            </h2>
+            <p>Tags are pre-defined snippets of text that can be accessed through a simple command. In Tickets, they can be accessed through the command <code>t!tag ID</code>.
+              Each tag has a 16 character ID assigned to it, which is what is used to access it.
+
+              <br/>
+              <br/>
+
+              To create tags, you'll use the <code>t!managetags</code> command (or <code>t!mt</code>). This command has 4 subcommands:
+            </p>
+            <div class="alert bg-blurple" role="alert">
+              <b>t!mt list</b> Lists all canned responses
+            </div>
+            <div class="alert bg-blurple" role="alert">
+              <b>t!mt view [ID]</b> Displays the contents of a canned response
+            </div>
+            <div class="alert bg-blurple" role="alert">
+              <b>t!mt add [ID] [Contents]</b> Adds a new canned response
+            </div>
+            <div class="alert bg-blurple" role="alert">
+              <b>t!mt delete [ID]</b> Deletes a canned response
+            </div>
+
+            <br/>
+
+            <p>If it is less confusing, there is a tag management page available on the <a href="https://panel.ticketsbot.net">web UI</a> for easy management, as some users feel the command
+            is too complex.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{{end}}

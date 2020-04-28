@@ -1,0 +1,19 @@
+html, body {
+  overflow-x: hidden;
+}
+
+body, .page-header {
+  height: auto;
+  max-height: none;
+}
+
+p, .text-format {
+  width: 100%;
+  font-family: 'Open Sans',sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: left;
+  text-transform: none;
+  white-space: normal;
+  color: rgba(255, 255, 255, 0.8);
+}

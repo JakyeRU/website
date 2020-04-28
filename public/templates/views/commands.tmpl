@@ -1,0 +1,41 @@
+{{define "content"}}
+  <div class="wrapper">
+    <div class="page-header header-filter">
+      <div class="squares square1"></div>
+      <div class="squares square2"></div>
+      <div class="squares square3"></div>
+      <div class="squares square5"></div>
+      <div class="squares square7"></div>
+      <div class="container">
+        {{template "navbar" .}}
+        <div class="row justify-content-center">
+          <div class="col-lg-12">
+            <h2 class="mb-5 display-2" id="commands">
+              <span>Commands</span>
+            </h2>
+            <table class="table">
+              <thead>
+              <tr>
+                <th class="text-center">Command</th>
+                <th class="text-center">Description</th>
+                <th class="text-center">Example</th>
+                <th class="text-center">Permission Level</th>
+              </tr>
+              </thead>
+              <tbody>
+              {{range $i, $command := .commands}}
+                <tr>
+                  <td class="text-center">{{$command.Name}}</td>
+                  <td class="text-center">{{$command.Description}}</td>
+                  <td class="text-center">{{$command.Example}}</td>
+                  <td class="text-center">{{$command.Permission}}</td>
+                </tr>
+              {{end}}
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{{end}}

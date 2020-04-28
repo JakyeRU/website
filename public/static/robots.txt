@@ -1,0 +1,14 @@
+Sitemap: https://ticketsbot.net/sitemap.xml
+User-agent: *
+
+Allow: /
+Allow: /commands
+Allow: /settings
+Allow: /tags
+Allow: /premium
+Allow: /assets/blk/css/blk-design-system.min.css
+Allow: /assets/css/style.css
+Allow: /assets/css/index.css
+Allow: /assets/css/info.css
+
+Disallow: /

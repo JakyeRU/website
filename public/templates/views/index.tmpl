@@ -1,0 +1,121 @@
+{{define "content"}}
+  <div class="wrapper">
+    <div class="page-header header-filter">
+      <div class="squares square1"></div>
+      <div class="squares square2"></div>
+      <div class="squares square3"></div>
+      <div class="squares square4"></div>
+      <div class="squares square5"></div>
+      <div class="squares square7"></div>
+      <div class="container">
+          {{template "navbar" .}}
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="brand">
+              <h2 class="display-2">Tickets</h2>
+              <p class="subtitle">A Discord Ticket Bot</p>
+              <p class="servercount"><span style="display: inline;">Join the <b><span id="count" style="display: inline;">0</span></b> servers using Tickets today</span>
+              </p>
+              <p class="caption">Tickets is simple, customisable and powerful Discord ticket system complete with a web
+                UI. Learn how to get up and running in under 30 seconds today.</p>
+              <div class="invite-button-wrapper">
+                <a class="btn invite-button" href="https://invite.ticketsbot.net">
+                  <img src="/assets/img/discord.png" class="discord-logo" alt="Discord logo"/>
+                  Invite Tickets to your server
+                </a>
+              </div>
+            </div>
+
+            <h2 class="display-2" style="padding-top: 20px">Features</h2>
+            <div class="container-fluid">
+              <div class="row">
+                <div class="col-sm feature-wrapper">
+              <span class="badge badge-white about">
+                <a href="/panels"><h4 class="display-4 feature-header">Panels</h4></a>
+                <img src="/assets/img/panel.png" class="feature-image" alt="Reaction Panels"/>
+                <p class="feature-description">Tickets can be created with a single reaction for ease of use</p>
+              </span>
+                </div>
+                <div class="col-sm feature-wrapper">
+              <span class="badge badge-white about">
+                <a href="https://panel.ticketsbot.net"><h4 class="display-4 feature-header">Web UI</h4></a>
+                  <img src="/assets/img/webui.png" class="feature-image border" alt="Web UI"/>
+                  <p class="feature-description">Manage settings, view archives and respond to tickets from our detailed web UI</p>
+                </span>
+                </div>
+              </div>
+              <div class="row" style="padding-top: 25px">
+                <div class="col-sm feature-wrapper">
+              <span class="badge badge-white about">
+                <a href="/panels"><h4 class="display-4 feature-header">Ticket Archives</h4></a>
+                <img src="/assets/img/archives.png" class="feature-image" alt="Ticket Archives"/>
+                <p class="feature-description">Archives of tickets are taken upon close and are uploaded to the web UI.</p>
+              </span>
+                </div>
+                <div class="col-sm feature-wrapper">
+              <span class="badge badge-white about">
+                <a href="/tags"><h4 class="display-4 feature-header">Canned Responses</h4></a>
+                  <img src="/assets/img/tag.webp" class="feature-image border" alt="Canned Responses"/>
+                  <p class="feature-description">Save predefined responses for later use</p>
+                </span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-4" id="widgets">
+            <div class="row">
+              <a href="https://discordbots.org/bot/508391840525975553/vote">
+                <img
+                        src="https://discordbots.org/api/widget/508391840525975553.svg"
+                        alt="Tickets Voting Page #1"
+                        loading="lazy">
+              </a>
+            </div>
+            <div class="row">
+              <a href="https://discord.boats/bot/508391840525975553/vote" style="margin-top: 10px">
+                <img
+                        src="https://discord.boats/api/widget/508391840525975553"
+                        alt="Tickets Voting Page #2"
+                        loading="lazy">
+              </a>
+            </div>
+            <div class="row">
+              <a href="https://discordbotlist.com/bots/508391840525975553" style="margin-top: 10px">
+                <img
+                        width="300"
+                        height="110"
+                        src="https://discordbotlist.com/bots/508391840525975553/widget"
+                        alt="Tickets Voting Page #3"
+                        loading="lazy">
+              </a>
+            </div>
+            <div class="row" style="margin-top: 10px">
+              <a id="timeline" class="twitter-timeline" data-width="300" data-height="391" data-theme="dark" data-link-color="#7289DA" href="https://twitter.com/TicketsDiscord?ref_src=twsrc%5Etfw">Tweets byTicketsDiscord</a>
+              <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+      function loadServerCount() {
+        fetch('https://servercounter.ticketsbot.net/total').then((res) => {
+          if (res.status !== 200) {
+            console.log(res);
+            return;
+          }
+
+          res.json().then((data) => {
+            if (data.success) {
+              document.getElementById('count').appendChild(document.createTextNode(data.count));
+            }
+          });
+        });
+      }
+
+      loadServerCount();
+  </script>
+{{end}}

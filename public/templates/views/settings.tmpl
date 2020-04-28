@@ -1,0 +1,56 @@
+{{define "content"}}
+  <div class="wrapper">
+    <div class="page-header header-filter">
+      <div class="squares square1"></div>
+      <div class="squares square2"></div>
+      <div class="squares square3"></div>
+      <div class="squares square5"></div>
+      <div class="squares square7"></div>
+      <div class="container">
+        {{template "navbar" .}}
+        <div class="row justify-content-center">
+          <div class="col-lg-12">
+            <h2 class="mb-5" id="commands">
+              <span>Settings</span>
+            </h2>
+            <p>
+              Upon adding Tickets to your Discord server, you'll need to go through some basic setup. Don't worry though! Tickets only takes 30 seconds to setup!
+              Tickets is extremely configurable, but also extremely easy to configure.
+
+              <br />
+              <br />
+              After you add Tickets to your Discord server (which can be done by clicking the Invite button at the top of this base), you'll have to ensure that it has the following permissions:
+            </p>
+            <ul>
+              <li class="text-format">Read messages</li>
+              <li class="text-format">Send messages</li>
+              <li class="text-format">Embed links</li>
+              <li class="text-format">Manage messages</li>
+              <li class="text-format">Manage channels</li>
+            </ul>
+            <p>Once the bot has these permissions, you can begin the configuration process. To start, simply run <code>t!setup</code>. You'll then be prompted to provide:</p>
+            <ul>
+              <li class="text-format">A new <b>prefix</b> for the bot (although the <code>t!</code> prefix will continue to work)</li>
+              <li class="text-format">A <b>welcome message</b> that will be sent at the start of each ticket</li>
+              <li class="text-format">A <b>ticket limit</b> that prevents a user from opening too many tickets</li>
+              <li class="text-format">The <b>channel category</b> that tickets shall be created under (Note: This must already exist)</li>
+              <li class="text-format">The <b>archive channel</b>, to which ticket logs are posted to after tickets are closed</li>
+            </ul>
+
+            <p>We're almost there! The last thing you'll want to do is add your admins and support representatives so that they are included in each ticket. You can do this through:</p>
+
+            <div class="alert bg-blurple text-format" role="alert">
+              <strong>t!addadmin @User / Role</strong> Grants a user or role admin privileges
+            </div>
+            <div class="alert bg-blurple text-format" role="alert">
+              <strong>t!addsupport @User / Role</strong> Adds a user or role as a support representative
+            </div>
+
+            <br />
+            <p>That's it! We're done! If you have any further questions, feel free to join our support server, which is linked at the top of this page.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{{end}}

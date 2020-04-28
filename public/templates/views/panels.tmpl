@@ -1,0 +1,51 @@
+{{define "content"}}
+  <div class="wrapper">
+    <div class="page-header header-filter">
+      <div class="squares square1"></div>
+      <div class="squares square2"></div>
+      <div class="squares square3"></div>
+      <div class="squares square5"></div>
+      <div class="squares square7"></div>
+      <div class="container">
+        {{template "navbar" .}}
+        <div class="row justify-content-center">
+          <div class="col-lg-12">
+            <h2 class="mb-5">
+              <span>Panels</span>
+            </h2>
+            <p>
+              Panels are a simple way for your users to open tickets. They require only a single click to add a reaction,
+              and a ticket will automatically open.
+              Additionally, <a href="/premium" class="fg-blurple">premium</a> users can create multiple panels that open
+              tickets in different channel categories, such that you can provide support
+              for multiple services through a single Discord server whilst maintaining an organised channel setup.
+            </p>
+
+            <h3>Creating a panel</h3>
+
+            <p>
+              Firstly, head over to the <a href="https://panel.ticketsbot.net/" class="fg-blurple"> web UI</a> to
+              configure the panel settings. You are able to edit the following options:
+            </p>
+
+            <ul class="text-format">
+              <li class="text-format">Embed Title</li>
+              <li class="text-format">Embed Content</li>
+              <li class="text-format">Embed Colour</li>
+              <li class="text-format">Reaction Emoji</li>
+              <li class="text-format">Ticket Channel Category</li>
+              <li class="text-format">Channel the panel will be created in</li>
+            </ul>
+            <img src="/assets/img/panelsettings.webp"/>
+
+            <p style="margin-top: 20px">
+              Once you have configured the settings to your liking, simply click the submit button, and the panel will
+              appear in the channel you specified and is ready to use.
+            </p>
+            <img src="/assets/img/panel.png" style="padding-bottom: 20px"/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{{end}}

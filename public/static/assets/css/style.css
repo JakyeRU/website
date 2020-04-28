@@ -1,0 +1,103 @@
+html, body {
+  font-family: 'Open Sans',sans-serif !important;
+}
+
+.nav-pills.pink-grad .nav-item .nav-link.active, .nav-pills.pink-grad .nav-item .nav-link.active:focus, .nav-pills.pink-grad .nav-item .nav-link.active:hover {
+  /*background-image: linear-gradient(0deg,#2A1F51,#602F81);*/
+  background-color: #7289DA;
+  /*background-image: linear-gradient(0deg,#5b78de,#7289DA);*/
+}
+
+.white-background {
+  background-color: white;
+}
+
+.about {
+  min-width: 100%;
+  width: 100% !important;
+  color: #525f7f;
+  background-color: #36393f;
+  font-family: 'Open Sans',sans-serif;
+  font-size: 1rem;
+  line-height: 1.5;
+  text-align: left;
+  text-transform: none;
+  white-space: normal;
+  height: 200px;
+  border-radius: 10px;
+
+  -webkit-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.75);
+}
+
+.text-margin {
+  margin-left: 10px;
+}
+
+.pad-top {
+  margin-top: 5px;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+.sidebar-text {
+  font-family: 'Open Sans',sans-serif;
+  font-size: 14px;
+  color: #c4c4c4;
+}
+
+.sidebar-header {
+  font-family: 'Open Sans',sans-serif;
+}
+
+.bg-blurple {
+  background-color: #7289DA;
+}
+
+.fg-blurple {
+  color: #7289DA;
+}
+
+.white {
+  color: white;
+}
+
+.nav-pills .nav-item i {
+  display: inline !important;
+  font-size: 0.9rem !important;
+  line-height: 1 !important;
+}
+
+.nav-pills .nav-item i {
+  display: inline !important;
+  font-size: 0.9rem !important;
+  line-height: 1 !important;
+}
+
+.invite-button {
+  font-size: 18px;
+  font-weight: bold;
+  width: 100%;
+}
+
+.invite-button, .invite-button:hover, .invite-button:active, .invite-button:focus, .btn, .navbar .navbar-nav>a.btn, .btn.active, .btn.active:focus, .btn.active:hover, .btn:active, .btn:active:focus, .btn:active:hover, .btn:focus, .btn:hover {
+      background-color: #7289DA !important;
+      background-image: linear-gradient(0deg,#5b78de,#7289DA) !important;
+}
+
+.invite-button-wrapper {
+  padding-top: 10px;
+}
+
+.discord-logo {
+  width: 30px;
+}
+
+@media screen and (max-width: 991px) {
+  .navbar .dropdown .dropdown-menu, .navbar .dropdown.show .dropdown-menu {
+    background-color: white;
+  }
+}

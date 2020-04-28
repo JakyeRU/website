@@ -1,0 +1,66 @@
+{{define "content"}}
+  <div class="wrapper">
+    <div class="page-header header-filter">
+      <div class="squares square1"></div>
+      <div class="squares square2"></div>
+      <div class="squares square3"></div>
+      <div class="squares square5"></div>
+      <div class="squares square7"></div>
+      <div class="container">
+        {{template "navbar" .}}
+        <div class="row justify-content-center">
+          <div class="col-lg-12">
+            <h2 class="mb-5">
+              <span>Premium</span>
+            </h2>
+            <p style="margin-bottom: 40px">Premium offers benefits to help you manage your tickets even more efficiently.
+              Purchasing premium also helps support the development of Tickets and help us pay our server bills.
+            </p>
+
+            <table class="table">
+              <thead>
+              <tr>
+                <th class="text-center"></th>
+                <th class="text-center">Free</th>
+                <th class="text-center">Premium</th>
+              </tr>
+              </thead>
+              <tbody>
+              <tr>
+                <td class="text-center" style="width: 35%">Branding in message footer</td>
+                <td class="text-center"><i class="fas fa-check"></i></td>
+                <td class="text-center"><i class="fas fa-times"></i></td>
+              </tr>
+              <tr>
+                <td class="text-center" style="width: 35%">Create ticket panels</td>
+                <td class="text-center">1</td>
+                <td class="text-center">Unlimited</td>
+              </tr>
+              <tr>
+                <td class="text-center" style="width: 35%">Access to statistics (t!stats)</td>
+                <td class="text-center"><i class="fas fa-times"></i></td>
+                <td class="text-center"><i class="fas fa-check"></i></td>
+              </tr>
+              <tr>
+                <td class="text-center" style="width: 35%">Live messages updates on the web panel ticket view</td>
+                <td class="text-center"><i class="fas fa-times"></i></td>
+                <td class="text-center"><i class="fas fa-check"></i></td>
+              </tr>
+              <tr>
+                <td class="text-center" style="width: 35%">Ability to send messages to tickets from the web panel ticket view</td>
+                <td class="text-center"><i class="fas fa-times"></i></td>
+                <td class="text-center"><i class="fas fa-check"></i></td>
+              </tr>
+              <tr>
+                <td class="text-center" style="width: 40%"></td>
+                <td class="text-center"><button type="button" class="btn btn-info" onclick="location.href='https://invite.ticketsbot.net'">Invite</button></td>
+                <td class="text-center"><button type="button" class="btn btn-info" onclick="location.href='https://patreon.com/ticketsbot'">$2/mo</button></td>
+              </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{{end}}

@@ -1,0 +1,104 @@
+[server]
+address=":3000"
+
+[[commands]]
+name="t!about"
+description="Tells you information about the bot"
+example="t!about"
+permission="Everyone"
+
+[[commands]]
+name="t!addadmin"
+description="Grants a user or role admin privileges"
+example="t!addadmin @User"
+permission="Administrator"
+
+[[commands]]
+name="t!add"
+description="Adds a user to a ticket"
+example="t!add #ticket @User"
+permission="Everyone"
+
+[[commands]]
+name="t!addsupport"
+description="Adds a user or role as a support representative"
+example="t!addsupport @User"
+permission="Administrator"
+
+[[commands]]
+name="t!blacklist"
+description="Toggles whether users are allowed to interact with the bot"
+example="t!blacklist @User"
+permission="Support"
+
+[[commands]]
+name="t!c"
+description="Sends a predefined canned response"
+example="t!c myresponse"
+permission="Support"
+
+[[commands]]
+name="t!close"
+description="Closes the current ticket"
+example="t!close"
+permission="Everyone"
+
+[[commands]]
+name="t!help"
+description="Shows you a list of commands"
+example="t!help"
+permission="Everyone"
+
+[[commands]]
+name="t!mcr"
+description="Command for managing canned responses"
+example="t!mcr [list/view/add/delete]"
+permission="Support"
+
+[[commands]]
+name="t!open"
+description="Opens a new ticket"
+example="t!open"
+permission="Everyone"
+
+[[commands]]
+name="t!panel"
+description="Creates a panel to enable users to open a ticket with 1 click"
+example="t!panel"
+permission="Administrator"
+
+[[commands]]
+name="t!removeadmin"
+description="Revokes a user's or role's admin privileges"
+example="t!removeadmin @User"
+permission="Administrator"
+
+[[commands]]
+name="t!remove"
+description="Removes a user from a ticket"
+example="t!remove"
+permission="Everyone"
+
+[[commands]]
+name="t!removesupport"
+description="Revokes a user's or role's support representative privileges"
+example="t!removesupport @User"
+permission="Administrator"
+
+[[commands]]
+name="t!setup"
+description="Allows you to easily configure the bot"
+example="t!setup"
+permission="Administrator"
+
+[[commands]]
+name="t!cancel"
+description="Cancels the setup process"
+example="t!cancel"
+permission="Administrator"
+
+[[commands]]
+name="t!viewstaff"
+description="Lists the staff members and roles"
+example="t!viewstaff"
+permission="Everyone"
