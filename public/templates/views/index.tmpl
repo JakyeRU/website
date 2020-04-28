@@ -110,6 +110,7 @@
 
           res.json().then((data) => {
             if (data.success) {
+              document.getElementById('count').innerHTML = '';
               document.getElementById('count').appendChild(document.createTextNode(data.count));
             }
           });
