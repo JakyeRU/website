@@ -14,7 +14,8 @@
             <div class="brand">
               <h2 class="display-2">Tickets</h2>
               <p class="subtitle">A Discord Ticket Bot</p>
-              <p class="servercount"><span style="display: inline;">Join the <b><span id="count" style="display: inline;">0</span></b> servers using Tickets today</span>
+              <p class="servercount"><span style="display: inline;">Join the <b><span id="count"
+                                                                                      style="display: inline;">0</span></b> servers using Tickets today</span>
               </p>
               <p class="caption">Tickets is simple, customisable and powerful Discord ticket system complete with a web
                 UI. Learn how to get up and running in under 30 seconds today.</p>
@@ -63,12 +64,34 @@
             </div>
           </div>
 
+          <script>
+              function loadServerCount() {
+                  fetch('https://servercounter.ticketsbot.net/total').then((res) => {
+                      if (res.status !== 200) {
+                          console.log(res);
+                          return;
+                      }
+
+                      res.json().then((data) => {
+                          if (data.success) {
+                              document.getElementById('count').innerHTML = '';
+                              document.getElementById('count').appendChild(document.createTextNode(data.count));
+                          }
+                      });
+                  });
+              }
+
+              loadServerCount();
+          </script>
+
           <div class="col-lg-4" id="widgets">
             <div class="row">
               <a href="https://discordbots.org/bot/508391840525975553/vote">
                 <img
                         src="https://discordbots.org/api/widget/508391840525975553.svg"
                         alt="Tickets Voting Page #1"
+                        width="300"
+                        height="150"
                         loading="lazy">
               </a>
             </div>
@@ -77,6 +100,8 @@
                 <img
                         src="https://discord.boats/api/widget/508391840525975553"
                         alt="Tickets Voting Page #2"
+                        width="300"
+                        height="150"
                         loading="lazy">
               </a>
             </div>
@@ -91,7 +116,9 @@
               </a>
             </div>
             <div class="row" style="margin-top: 10px">
-              <a id="timeline" class="twitter-timeline" data-width="300" data-height="391" data-theme="dark" data-link-color="#7289DA" href="https://twitter.com/TicketsDiscord?ref_src=twsrc%5Etfw">Tweets byTicketsDiscord</a>
+              <a id="timeline" class="twitter-timeline" data-width="300" data-height="391" data-theme="dark"
+                 data-link-color="#7289DA" href="https://twitter.com/TicketsDiscord?ref_src=twsrc%5Etfw">Tweets
+                byTicketsDiscord</a>
               <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
             </div>
           </div>
@@ -99,24 +126,4 @@
       </div>
     </div>
   </div>
-
-  <script>
-      function loadServerCount() {
-        fetch('https://servercounter.ticketsbot.net/total').then((res) => {
-          if (res.status !== 200) {
-            console.log(res);
-            return;
-          }
-
-          res.json().then((data) => {
-            if (data.success) {
-              document.getElementById('count').innerHTML = '';
-              document.getElementById('count').appendChild(document.createTextNode(data.count));
-            }
-          });
-        });
-      }
-
-      loadServerCount();
-  </script>
 {{end}}
