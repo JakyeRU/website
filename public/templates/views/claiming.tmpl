@@ -1,0 +1,51 @@
+{{define "content"}}
+  <div class="wrapper">
+    <div class="page-header header-filter">
+      <div class="squares square1"></div>
+      <div class="squares square2"></div>
+      <div class="squares square3"></div>
+      <div class="squares square5"></div>
+      <div class="squares square7"></div>
+      <div class="container">
+        {{template "navbar" .}}
+        <div class="row justify-content-center">
+          <div class="col-lg-12">
+            <h2 class="mb-5">
+              <span>Claiming</span>
+            </h2>
+            <p>Tickets can be claimed by your staff such that other staff members cannot also reply to the ticket. The
+              benefit of this is that tickets become less cluttered with many staff members talking at once.
+
+              <br/>
+              Alternatively, an admin could claim a ticket to keep the support team from seeing potentially sensitive issues.
+              <br/>
+              <br/>
+              Note: Admins will always have access to the ticket, as well as the user who claimed it.
+            </p>
+            <div class="alert bg-blurple" role="alert">
+              <b>t!claim</b> Assigns you to a ticket
+            </div>
+            <div class="alert bg-blurple" role="alert">
+              <b>t!transfer @User</b> Transfers a claimed ticket to another user
+            </div>
+            <div class="alert bg-blurple" role="alert">
+              <b>t!unclaim</b> Removes the claim on the current ticket
+            </div>
+
+            <br/>
+
+            <p>Claiming can be configured in 3 ways:</p>
+            <ul>
+              <li class="text-format">All staff members can see the ticket, but only the claimer can reply (Default)</li>
+              <li class="text-format">All staff members can see the ticket, and all staff members can reply</li>
+              <li class="text-format">Only the claimer can see the ticket</li>
+            </ul>
+
+            <p>You can configure which methodology is used on the <a href="https://panel.ticketsbot.net">dashboard</a>'s settings tab:</p>
+            <img src="/assets/img/claimsettings.webp" class="feature-image border" alt="Claiming Settings"/>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{{end}}

@@ -14,6 +14,7 @@ func (s *Server) createRenderer() multitemplate.Renderer {
 	renderer = registerTemplate(renderer, "tags")
 	renderer = registerTemplate(renderer, "panels")
 	renderer = registerTemplate(renderer, "premium")
+	renderer = registerTemplate(renderer, "claiming")
 
 	return renderer
 }

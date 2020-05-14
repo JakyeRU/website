@@ -39,6 +39,7 @@ func (s *Server) RegisterRoutes() {
 	s.router.GET("/tags", serveHtml("tags", nil))
 	s.router.GET("/panels", serveHtml("panels", nil))
 	s.router.GET("/premium", serveHtml("premium", nil))
+	s.router.GET("/claiming", serveHtml("claiming", nil))
 
 	// redirect canned responses to new page
 	s.router.GET("/cannedresponses", func (ctx *gin.Context) {
