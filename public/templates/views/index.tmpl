@@ -1,4 +1,6 @@
 {{define "content"}}
+  <script src="https://discordbotlist.com/widget/index.js" async></script>
+
   <div class="wrapper">
     <div id="whitelabel-banner">
       <h3><i class="fas fa-bullhorn"></i> <a href="/premium">Whitelabel (custom bot name + avatar + status) now available! Click here to learn more.</a></h3>
@@ -18,7 +20,7 @@
               <h2 class="display-2">Tickets</h2>
               <p class="subtitle">A Discord Ticket Bot</p>
               <p class="servercount"><span style="display: inline;">Join the <b><span id="count"
-                                                                                      style="display: inline;">0</span></b> servers using Tickets today</span>
+                                                                                      style="display: inline;"><dbl-stat bot-id="bot-tickets" stat="guilds">Loading...</dbl-stat></span></b> servers using Tickets today</span>
               </p>
               <p class="caption">Tickets is simple, customisable and powerful Discord ticket system complete with a web
                 UI. Learn how to get up and running in under 30 seconds today.</p>
@@ -67,7 +69,7 @@
             </div>
           </div>
 
-          <script>
+          <!--<script>
               function loadServerCount() {
                   fetch('https://servercounter.ticketsbot.net/total').then((res) => {
                       if (res.status !== 200) {
@@ -85,17 +87,12 @@
               }
 
               loadServerCount();
-          </script>
+          </script>-->
 
           <div class="col-lg-4" id="widgets">
             <div class="row">
-              <a href="https://discordbots.org/bot/508391840525975553/vote">
-                <img
-                        src="https://discordbots.org/api/widget/508391840525975553.svg"
-                        alt="Tickets Voting Page #1"
-                        width="300"
-                        height="150"
-                        loading="lazy">
+              <a href="https://discordbotlist.com/bots/508391840525975553/vote">
+                <dbl-widget bot-id="bot-508391840525975553" style="width: 300px !important"></dbl-widget>
               </a>
             </div>
             <div class="row">
@@ -105,16 +102,6 @@
                         alt="Tickets Voting Page #2"
                         width="300"
                         height="150"
-                        loading="lazy">
-              </a>
-            </div>
-            <div class="row">
-              <a href="https://discordbotlist.com/bots/508391840525975553" style="margin-top: 10px">
-                <img
-                        width="300"
-                        height="110"
-                        src="https://discordbotlist.com/bots/508391840525975553/widget"
-                        alt="Tickets Voting Page #3"
                         loading="lazy">
               </a>
             </div>
