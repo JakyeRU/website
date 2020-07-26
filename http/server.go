@@ -3,6 +3,7 @@ package http
 import (
 	"github.com/TicketsBot/website/config"
 	"github.com/gin-gonic/gin"
+	"os"
 )
 
 type Server struct {
@@ -48,7 +49,7 @@ func (s *Server) RegisterRoutes() {
 }
 
 func (s *Server) Listen() {
-	if err := s.router.Run(config.Conf.Server.Address); err != nil {
+	if err := s.router.Run(os.Getenv("SERVER_ADDR")); err != nil {
 		panic(err)
 	}
 }
