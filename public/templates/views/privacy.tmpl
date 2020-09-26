@@ -1,0 +1,58 @@
+{{define "content"}}
+  <div class="wrapper">
+    <div class="page-header header-filter">
+      <div class="squares square1"></div>
+      <div class="squares square2"></div>
+      <div class="squares square3"></div>
+      <div class="squares square5"></div>
+      <div class="squares square7"></div>
+      <div class="container">
+        {{template "navbar" .}}
+        <div class="row justify-content-center">
+          <div class="col-lg-12">
+            <h1 class="mb-5">Privacy</h1>
+
+            <h3>What data do you collect & how do you use the data?</h3>
+            <p>
+              When you invite Tickets to your server, we cache the guild object, channel objects and role objects.
+              Additionally, we may also cache any <a href="https://discord.com/developers/docs/resources/user#user-object-user-structure">user</a>
+              or <a href="https://discord.com/developers/docs/resources/guild#guild-member-object-guild-member-structure">member</a> objects that Discord
+              provides Tickets with in the GUILD_CREATE payload. Upon interaction with the bot, we may also cache your member and user objects if we do not already do so.
+              We store this data solely for operation of the Tickets service to prevent excessive API requests to the Discord API.
+
+              <br />
+              <br />
+
+              When a Ticket is closed in a server, all message content and participants (specifically username, avatar hash and discriminator) as retrieved and uploaded to our
+              ticket archive store. We use DigitalOcean's object storage offering to store the data, which is encrypted by us, and additionally encrypted by DigitalOcean at rest.
+
+              <br />
+              <br />
+
+              When logging into our web dashboard, we also collect all guild objects for the servers you are a member of. This is so we can verify your ownership / status in the server,
+              and provide a list of servers to manage.
+
+              <br />
+              <br />
+
+              Your data is not shared with any third party services.
+            </p>
+
+            <h3>How can I contact you regarding concerns with the Tickets service?</h3>
+            <p>
+              We are happy to resolve any data processing of security concerns you may have. The best way to get in contact with us is by joining our
+              <a href="https://discord.gg/VtV3rSk">Discord support server</a> and opening a Ticket in the #support channel.
+            </p>
+
+            <h3>How can I request my data or data removal?</h3>
+            <p>
+              Please join our <a href="https://discord.gg/VtV3rSk">Discord support server</a> and open a Ticket in the #support channel. Unfortunately, we are unable
+              to help you with these queries via external channels, as we would not be able to reliably verify your identity.
+              We will handle your request within 30 days of it being logged.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+{{end}}
