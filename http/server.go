@@ -2,6 +2,7 @@ package http
 
 import (
 	"github.com/TicketsBot/website/config"
+	"github.com/gin-contrib/cors"
 	"github.com/gin-gonic/gin"
 	"os"
 )
@@ -19,6 +20,11 @@ func NewServer() Server {
 func (s *Server) RegisterRoutes() {
 	// middleware
 	s.router.Use(gin.Recovery())
+
+	s.router.Use(cors.New(cors.Config{
+		AllowOrigins: []string{"https://panel.ticketsbot.net"},
+		AllowMethods: []string{"GET"},
+	}))
 
 	// static files on /
 	s.router.StaticFile("/manifest.webmanifest", "./public/static/manifest.webmanifest")
@@ -44,7 +50,7 @@ func (s *Server) RegisterRoutes() {
 	s.router.GET("/privacy", serveHtml("privacy", nil))
 
 	// redirect canned responses to new page
-	s.router.GET("/cannedresponses", func (ctx *gin.Context) {
+	s.router.GET("/cannedresponses", func(ctx *gin.Context) {
 		ctx.Redirect(301, "/tags")
 	})
 }
