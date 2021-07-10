@@ -23,4 +23,8 @@
     <loc>https://ticketsbot.net/claiming</loc>
     <priority>1.0</priority>
   </url>
+  <url>
+    <loc>https://ticketsbot.net/privacy</loc>
+    <priority>1.0</priority>
+  </url>
 </urlset>
