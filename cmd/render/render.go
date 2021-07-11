@@ -31,25 +31,28 @@ func main() {
 		return copyFile(path, strings.Replace(path, "public/static", "./build", -1))
 	}))
 
-	views := map[string]gin.H{
-		"index":    nil,
-		"settings": nil,
-		"commands": {
-			"commands": config.Conf.Commands,
-		},
-		"tags": nil,
-		"panels": nil,
-		"premium": nil,
-		"claiming": nil,
-		"privacy": nil,
+	data := gin.H{
+		"commands": config.Conf.Commands,
 	}
 
-	for view, data := range views {
-		f, err := os.Create(fmt.Sprintf("./build/%s.html", view))
+	utils.Must(filepath.Walk("./public/templates/views", func(path string, info os.FileInfo, err error) error {
+		if err != nil {
+			return err
+		}
+
+		if info.IsDir() {
+			return nil
+		}
+
+		lastIdx := strings.LastIndex(path, string(os.PathSeparator))
+		name := strings.Replace(path[lastIdx+1:], ".tmpl", "", 1)
+
+		f, err := os.Create(fmt.Sprintf("./build/%s.html", name))
 		utils.Must(err)
 
-		utils.Must(render.CreateTemplate(view).ExecuteTemplate(f, "layout", data))
-	}
+		utils.Must(render.CreateTemplate(name).ExecuteTemplate(f, "layout", data))
+		return nil
+	}))
 }
 
 func copyFile(src, dst string) error {
