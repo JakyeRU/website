@@ -1,137 +1,137 @@
 [[commands]]
-name="t!about"
+name="/about"
 description="Tells you information about the bot"
-example="t!about"
+example="/about"
 permission="Everyone"
 
 [[commands]]
-name="t!add"
+name="/add"
 description="Adds a user to a ticket"
-example="t!add #ticket @User"
+example="/add @User #ticket"
 permission="Everyone"
 
 [[commands]]
-name="t!addadmin"
+name="/addadmin"
 description="Grants a user or role admin privileges"
-example="t!addadmin @User"
+example="/addadmin @User"
 permission="Administrator"
 
 [[commands]]
-name="t!addsupport"
+name="/addsupport"
 description="Adds a user or role as a support representative"
-example="t!addsupport @User"
+example="/addsupport @User"
 permission="Administrator"
 
 [[commands]]
-name="t!blacklist"
+name="/blacklist"
 description="Toggles whether users are allowed to interact with the bot"
-example="t!blacklist @User"
+example="/blacklist @User"
 permission="Support"
 
 [[commands]]
-name="t!cancel"
+name="/cancel"
 description="Cancels the setup process"
-example="t!cancel"
+example="/cancel"
 permission="Administrator"
 
 [[commands]]
-name="t!claim"
+name="/claim"
 description="Assigns a single staff member to a ticket"
-example="t!claim"
+example="/claim"
 permission="Support"
 
 [[commands]]
-name="t!close"
+name="/close"
 description="Closes the current ticket"
-example="t!close"
+example="/close"
 permission="Everyone"
 
 [[commands]]
-name="t!help"
+name="/help"
 description="Shows you a list of commands"
-example="t!help"
+example="/help"
 permission="Everyone"
 
 [[commands]]
-name="t!mt"
+name="/mt"
 description="Command for managing tags"
-example="t!mcr [list/add/delete]"
+example="/mcr [list/add/delete]"
 permission="Support"
 
 [[commands]]
-name="t!open"
+name="/open"
 description="Opens a new ticket"
-example="t!open"
+example="/open"
 permission="Everyone"
 
 [[commands]]
-name="t!panel"
+name="/panel"
 description="Creates a panel to enable users to open a ticket with 1 click"
-example="t!panel"
+example="/panel"
 permission="Administrator"
 
 [[commands]]
-name="t!remove"
+name="/remove"
 description="Removes a user from a ticket"
-example="t!remove"
+example="/remove"
 permission="Everyone"
 
 [[commands]]
-name="t!removeadmin"
+name="/removeadmin"
 description="Revokes a user's or role's admin privileges"
-example="t!removeadmin @User"
+example="/removeadmin @User"
 permission="Administrator"
 
 [[commands]]
-name="t!removesupport"
+name="/removesupport"
 description="Revokes a user's or role's support representative privileges"
-example="t!removesupport @User"
+example="/removesupport @User"
 permission="Administrator"
 
 [[commands]]
-name="t!rename"
+name="/rename"
 description="Renames the current ticket"
-example="t!rename channel-name"
+example="/rename channel-name"
 permission="Support"
 
 [[commands]]
-name="t!setup"
+name="/setup"
 description="Allows you to easily configure the bot"
-example="t!setup"
+example="/setup"
 permission="Administrator"
 
 [[commands]]
-name="t!stats"
+name="/stats"
 description="Shows you statistics about users, support staff and the server"
-example="t!stats [server / @User]"
+example="/stats [server / @User]"
 permission="Support"
 
 [[commands]]
-name="t!tag"
+name="/tag"
 description="Sends a predefined snippet of text"
-example="t!tag mytag"
+example="/tag mytag"
 permission="Support"
 
 [[commands]]
-name="t!transfer"
+name="/transfer"
 description="Transfers a claimed ticket to another user"
-example="t!transfer @User"
+example="/transfer @User"
 permission="Support"
 
 [[commands]]
-name="t!unclaim"
+name="/unclaim"
 description="Removes the claim on the current ticket"
-example="t!unclaim"
+example="/unclaim"
 permission="Support"
 
 [[commands]]
-name="t!viewstaff"
+name="/viewstaff"
 description="Lists the staff members and roles"
-example="t!viewstaff"
+example="/viewstaff"
 permission="Everyone"
 
 [[commands]]
-name="t!vote"
+name="/vote"
 description="Gives you a link to vote for free premium"
-example="t!vote"
+example="/vote"
 permission="Everyone"
